@@ -60,9 +60,13 @@ def score_game_3(random_predict_3) -> int:
     for number in random_array:
         count_ls.append(random_predict_3(number))
 
-    score = int(np.mean(count_ls))
-    print(f"Ваш алгоритм угадывает число в среднем за: {score} попытки")
+#    score = int(np.mean(count_ls))
 
+    print(f'Среднее число попыток: {int(np.mean(count_ls))}')
+    print(f'Максимальное количество попыток: {max(count_ls)}')
+    print(f'Минимальное количество попыток: {min(count_ls)}')
+    
+    
 #RUN
 if __name__ == '__main__':
     score_game_3(random_predict_3)
